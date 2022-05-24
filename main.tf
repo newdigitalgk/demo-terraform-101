@@ -6,8 +6,8 @@ provider "aws" {
 }
 
 module "server" {
-  source = "./server"
-
+ source = "hashicorp/aws"
+      version = "3.72.0"
   num_webs     = var.num_webs
   identity     = var.identity
   ami          = var.ami
